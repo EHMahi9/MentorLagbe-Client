@@ -45,6 +45,12 @@ export async function apiRequest<T = any>(
   }));
 
   if (!response.ok) {
+    if (response.status === 401 && typeof window !== 'undefined') {
+      // Clean up stale or expired session credentials
+      localStorage.removeItem('ml_token');
+      localStorage.removeItem('ml_user');
+      document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
     throw new Error(data.message || `Request failed with status ${response.status}`);
   }
 
