@@ -22,9 +22,11 @@ import {
 } from 'lucide-react';
 import TuitionCard, { Tuition } from '../components/TuitionCard';
 import { apiRequest } from '../lib/api';
+import { useAuth } from '../lib/authContext';
 
 export default function HomePage() {
   const router = useRouter();
+  const { user } = useAuth();
   const [featuredTuitions, setFeaturedTuitions] = useState<Tuition[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
@@ -380,12 +382,22 @@ export default function HomePage() {
             </div>
 
             <div className="pt-8">
-              <Link
-                href="/sign-up"
-                className="block w-full py-3 text-center rounded-xl text-sm font-semibold border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors"
-              >
-                Get Started Free
-              </Link>
+              {user?.plan === 'pro' ? (
+                <span className="block w-full py-3 text-center rounded-xl text-sm font-semibold text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700">
+                  Included in PRO
+                </span>
+              ) : user ? (
+                <span className="block w-full py-3 text-center rounded-xl text-sm font-semibold text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800">
+                  Current Free Plan
+                </span>
+              ) : (
+                <Link
+                  href="/sign-up"
+                  className="block w-full py-3 text-center rounded-xl text-sm font-semibold border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors"
+                >
+                  Get Started Free
+                </Link>
+              )}
             </div>
           </div>
 
@@ -429,12 +441,21 @@ export default function HomePage() {
             </div>
 
             <div className="pt-8">
-              <Link
-                href="/pricing"
-                className="block w-full py-3 text-center rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all"
-              >
-                Upgrade to Pro →
-              </Link>
+              {user?.plan === 'pro' ? (
+                <button
+                  disabled
+                  className="block w-full py-3 text-center rounded-xl text-sm font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 cursor-default"
+                >
+                  ✓ Current Active Plan (PRO)
+                </button>
+              ) : (
+                <Link
+                  href="/pricing"
+                  className="block w-full py-3 text-center rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all"
+                >
+                  Upgrade to Pro →
+                </Link>
+              )}
             </div>
           </div>
         </div>
