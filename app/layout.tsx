@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { AuthProvider } from '../lib/authContext';
 import { Toaster } from 'react-hot-toast';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import AppShell from '../components/AppShell';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,6 +18,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('ml_theme');
+                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (saved === 'dark' || (!saved && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="flex flex-col min-h-screen antialiased bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
         <AuthProvider>
           <Toaster
@@ -45,9 +63,7 @@ export default function RootLayout({
               },
             }}
           />
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <AppShell>{children}</AppShell>
         </AuthProvider>
       </body>
     </html>

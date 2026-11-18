@@ -23,11 +23,11 @@ export default function Footer() {
               Bangladesh&apos;s leading smart tuition and mentorship marketplace. Connecting
               qualified subject experts with ambitious students for personalized 1-on-1 mentorship and small batches.
             </p>
-            {/* Social Media Links with Official New X Logo */}
+            {/* Social Media Links with User Custom Profiles */}
             <div className="flex items-center gap-3 pt-2">
               {/* New X Logo SVG */}
               <a
-                href="https://x.com"
+                href="https://x.com/e_h_mahi"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X (formerly Twitter)"
@@ -38,7 +38,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ebnul-hasan-mahi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -60,7 +60,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/ebnulhasan.mahi9"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
