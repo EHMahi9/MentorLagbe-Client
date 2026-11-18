@@ -24,10 +24,19 @@ export async function uploadToImgBB(file: File): Promise<string> {
     if (data.success && data.data?.url) {
       return data.data.url;
     } else {
-      throw new Error(data.error?.message || 'Failed to upload image to ImgBB.');
+      console.warn('ImgBB returned error, using fallback Data URL:', data.error?.message);
+      return new Promise<string>((resolve) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result as string);
+        reader.readAsDataURL(file);
+      });
     }
   } catch (error: any) {
-    console.error('ImgBB Upload Error:', error);
-    throw new Error(error.message || 'Image upload failed. Please try again.');
+    console.warn('ImgBB Upload failed, using fallback Data URL:', error);
+    return new Promise<string>((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result as string);
+      reader.readAsDataURL(file);
+    });
   }
 }
