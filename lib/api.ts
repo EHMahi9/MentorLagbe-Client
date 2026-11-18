@@ -1,5 +1,6 @@
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const rawBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+// Automatically handle trailing slashes or duplicate /api prefix
+const API_BASE_URL = rawBase.replace(/\/+$/, '').replace(/\/api$/, '');
 
 export interface ApiResponse<T = any> {
   success: boolean;
