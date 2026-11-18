@@ -51,15 +51,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       document.documentElement.classList.add('dark');
     }
 
-    // 2. Auth initialization (Ensures user is not redirected to login on reload)
+    // 2. Auth initialization (Instant 0ms Mobile Hydration via Stale-While-Revalidate)
     const storedToken = localStorage.getItem('ml_token');
     const storedUser = localStorage.getItem('ml_user');
 
     if (storedToken && storedUser) {
       try {
+        const parsed = JSON.parse(storedUser);
         setToken(storedToken);
-        setUser(JSON.parse(storedUser));
-        // Verify and refresh with backend
+        setUser(parsed);
+        setLoading(false); // Render UI immediately without waiting for server wake-up
+
+        // Silently verify and refresh credentials in the background
         apiRequest<{ success: boolean; user: User }>('/api/auth/me')
           .then((res) => {
             if (res.success && res.user) {
@@ -67,10 +70,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
               localStorage.setItem('ml_user', JSON.stringify(res.user));
             }
           })
-          .catch(() => {
-            // Keep local state if transient network error occurs during dev/reload
-          })
-          .finally(() => setLoading(false));
+          .catch((err) => {
+            // If token expired (401), clean credentials
+            if (err?.message?.includes('401') || err?.message?.includes('Unauthorized')) {
+              setToken(null);
+              setUser(null);
+              localStorage.removeItem('ml_token');
+              localStorage.removeItem('ml_user');
+            }
+          });
       } catch {
         setLoading(false);
       }
