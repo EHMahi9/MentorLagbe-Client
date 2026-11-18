@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {
@@ -29,6 +29,122 @@ function SignInContent() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // 1. Check for token in URL hash if redirected back from Google OAuth
+    if (typeof window !== 'undefined' && window.location.hash.includes('id_token=')) {
+      const params = new URLSearchParams(window.location.hash.replace('#', '?'));
+      const idToken = params.get('id_token');
+      if (idToken) {
+        window.history.replaceState(null, '', window.location.pathname);
+        handleGoogleCredentialResponse({ credential: idToken });
+      }
+    }
+
+    // 2. Initialize Google Identity Services SDK
+    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+    if (!clientId) return;
+
+    const existingScript = document.getElementById('google-gsi-client');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = 'google-gsi-client';
+      script.src = 'https://accounts.google.com/gsi/client';
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        if ((window as any).google?.accounts?.id) {
+          (window as any).google.accounts.id.initialize({
+            client_id: clientId,
+            callback: handleGoogleCredentialResponse,
+          });
+          const btn = document.getElementById('google-btn-rendered');
+          if (btn) {
+            (window as any).google.accounts.id.renderButton(btn, {
+              theme: 'outline',
+              size: 'large',
+              width: 320,
+              text: 'continue_with',
+              shape: 'rectangular',
+            });
+          }
+        }
+      };
+      document.body.appendChild(script);
+    } else if ((window as any).google?.accounts?.id) {
+      (window as any).google.accounts.id.initialize({
+        client_id: clientId,
+        callback: handleGoogleCredentialResponse,
+      });
+      const btn = document.getElementById('google-btn-rendered');
+      if (btn) {
+        (window as any).google.accounts.id.renderButton(btn, {
+          theme: 'outline',
+          size: 'large',
+          width: 320,
+          text: 'continue_with',
+          shape: 'rectangular',
+        });
+      }
+    }
+  }, []);
+
+  const handleGoogleCredentialResponse = async (response: any) => {
+    if (!response?.credential) return;
+    setLoading(true);
+    try {
+      const res = await apiRequest<{
+        success: boolean;
+        token: string;
+        user: any;
+        message: string;
+      }>('/api/auth/google', {
+        method: 'POST',
+        body: JSON.stringify({ credential: response.credential }),
+      });
+
+      if (res.success && res.token && res.user) {
+        login(res.token, res.user);
+        toast.success(`Welcome, ${res.user.name}!`);
+
+        if (redirectUrl) {
+          router.push(redirectUrl);
+        } else if (res.user.role === 'admin') {
+          router.push('/dashboard/admin');
+        } else if (res.user.role === 'tutor') {
+          router.push('/dashboard/tutor');
+        } else {
+          router.push('/dashboard/student');
+        }
+      }
+    } catch (err: any) {
+      toast.error(err.message || 'Google Sign-In failed.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const triggerGoogleSignIn = () => {
+    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+    if (!clientId) {
+      toast.error('Google Client ID not configured.');
+      return;
+    }
+
+    if ((window as any).google?.accounts?.id) {
+      (window as any).google.accounts.id.prompt((notification: any) => {
+        if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+          const redirectUri = typeof window !== 'undefined' ? `${window.location.origin}/sign-in` : 'https://mentorlagbe-five.vercel.app/sign-in';
+          const oauthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=id_token&scope=openid%20profile%20email&nonce=${Math.random().toString(36)}`;
+          window.location.href = oauthUrl;
+        }
+      });
+    } else {
+      const redirectUri = typeof window !== 'undefined' ? `${window.location.origin}/sign-in` : 'https://mentorlagbe-five.vercel.app/sign-in';
+      const oauthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=id_token&scope=openid%20profile%20email&nonce=${Math.random().toString(36)}`;
+      window.location.href = oauthUrl;
+    }
+  };
 
   const handleSignIn = async (overrideEmail?: string, overridePassword?: string) => {
     const finalEmail = overrideEmail || email;
@@ -166,32 +282,35 @@ function SignInContent() {
           </button>
         </form>
 
-        {/* Google Social Button (Visual / Mock) */}
-        <button
-          type="button"
-          onClick={() => toast('Google authentication available via credentials.', { icon: 'ℹ️' })}
-          className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 flex items-center justify-center gap-2 transition-colors"
-        >
-          <svg className="w-4 h-4" viewBox="0 0 24 24">
-            <path
-              fill="#4285F4"
-              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-            />
-            <path
-              fill="#34A853"
-              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-            />
-            <path
-              fill="#FBBC05"
-              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
-            />
-            <path
-              fill="#EA4335"
-              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
-            />
-          </svg>
-          <span>Sign in with Google</span>
-        </button>
+        {/* Google OAuth Sign-In Button */}
+        <div className="space-y-2">
+          <div id="google-btn-rendered" className="flex justify-center w-full min-h-[40px]"></div>
+          <button
+            type="button"
+            onClick={triggerGoogleSignIn}
+            className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 flex items-center justify-center gap-2 transition-colors shadow-xs"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24">
+              <path
+                fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              />
+              <path
+                fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+              />
+              <path
+                fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+              />
+            </svg>
+            <span>Sign in with Google</span>
+          </button>
+        </div>
 
         {/* 1-Click Quick Demo Access (As demonstrated in the instruction video) */}
         <div className="pt-2 border-t border-gray-100 dark:border-gray-700/80 space-y-2">
