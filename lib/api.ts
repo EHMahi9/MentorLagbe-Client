@@ -1,6 +1,15 @@
-const rawBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-// Automatically handle trailing slashes or duplicate /api prefix
-const API_BASE_URL = rawBase.replace(/\/+$/, '').replace(/\/api$/, '');
+function getBaseUrl(): string {
+  if (
+    process.env.NEXT_PUBLIC_API_URL &&
+    !process.env.NEXT_PUBLIC_API_URL.includes('localhost')
+  ) {
+    return process.env.NEXT_PUBLIC_API_URL;
+  }
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+    return 'https://mentorlagbe-server.onrender.com';
+  }
+  return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+}
 
 export interface ApiResponse<T = any> {
   success: boolean;
@@ -20,8 +29,10 @@ export async function apiRequest<T = any>(
     ...(options.headers || {}),
   };
 
+  const rawBase = getBaseUrl();
+  const baseUrl = rawBase.replace(/\/+$/, '').replace(/\/api$/, '');
   const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
-  const url = `${API_BASE_URL}${cleanEndpoint}`;
+  const url = `${baseUrl}${cleanEndpoint}`;
 
   const response = await fetch(url, {
     ...options,
