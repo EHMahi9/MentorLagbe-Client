@@ -9,7 +9,7 @@ import {
   Users,
   ShieldCheck,
   Star,
-  Sparkles,
+  Award,
   ArrowRight,
   GraduationCap,
   CheckCircle2,
@@ -117,7 +117,7 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 dark:bg-teal-950/70 border border-teal-200 dark:border-teal-800 text-teal-800 dark:text-teal-300 text-xs font-semibold">
-                <Sparkles className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+                <GraduationCap className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                 <span>Next-Generation Tuition & Mentorship Platform</span>
               </div>
 
@@ -411,7 +411,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">MentorLagbe PRO</h3>
                 <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-300">
-                  <Sparkles className="w-3 h-3" /> PRO Badge
+                  <Award className="w-3.5 h-3.5" /> PRO Badge
                 </span>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400">

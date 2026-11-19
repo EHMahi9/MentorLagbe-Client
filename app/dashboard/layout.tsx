@@ -13,7 +13,7 @@ import {
   CreditCard,
   User as UserIcon,
   LogOut,
-  Sparkles,
+  Zap,
   Menu,
   X,
   SunMedium,
@@ -194,7 +194,7 @@ export default function DashboardLayout({
                 onClick={() => setSidebarOpen(false)}
                 className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors"
               >
-                <Sparkles className="w-4 h-4" />
+                <Zap className="w-4 h-4" />
                 <span>Upgrade to PRO</span>
               </Link>
             )}

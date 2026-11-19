@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Check, Sparkles, Shield, Zap, ArrowRight, Star, HelpCircle } from 'lucide-react';
+import { Check, Shield, Zap, ArrowRight, Star, HelpCircle, Award } from 'lucide-react';
 import { useAuth } from '../../lib/authContext';
 import { apiRequest } from '../../lib/api';
 import toast from 'react-hot-toast';
@@ -51,7 +51,7 @@ export default function PricingPage() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3">
         <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-100 text-teal-800 dark:bg-teal-950/70 dark:text-teal-300">
-          <Sparkles className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+          <Zap className="w-4 h-4 text-teal-600 dark:text-teal-400" />
           <span>Transparent EdTech Subscription</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">
@@ -124,7 +124,7 @@ export default function PricingPage() {
         {/* MentorLagbe PRO */}
         <div className="relative p-8 sm:p-10 rounded-3xl bg-white dark:bg-gray-800/90 border-2 border-teal-500 dark:border-teal-400 shadow-2xl flex flex-col justify-between">
           <div className="absolute -top-4 right-8 px-3.5 py-1 rounded-full text-xs font-bold bg-teal-600 text-white tracking-wider uppercase shadow-md flex items-center gap-1">
-            <Sparkles className="w-3.5 h-3.5" /> RECOMMENDED
+            <Zap className="w-3.5 h-3.5" /> RECOMMENDED
           </div>
 
           <div className="space-y-4">
