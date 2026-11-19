@@ -16,7 +16,7 @@ import {
   Sparkles,
   Menu,
   X,
-  Sun,
+  SunMedium,
   Moon,
   ChevronRight,
   Shield,
@@ -233,9 +233,9 @@ export default function DashboardLayout({
             <button
               onClick={toggleTheme}
               aria-label="Toggle Theme"
-              className="p-2 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700/80 text-gray-600 dark:text-amber-400 hover:scale-105 transition-all shadow-sm flex items-center justify-center"
             >
-              {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
+              {theme === 'dark' ? <SunMedium className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-gray-600" />}
             </button>
 
             <Link

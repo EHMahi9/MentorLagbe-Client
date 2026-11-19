@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '../lib/authContext';
 import {
   GraduationCap,
-  Sun,
+  SunMedium,
   Moon,
   Menu,
   X,
@@ -77,13 +77,13 @@ export default function Navbar() {
 
           {/* Right Action Area */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Theme Switcher Button (Optional 4) */}
+            {/* Theme Switcher Button */}
             <button
               onClick={toggleTheme}
               aria-label="Toggle Theme"
-              className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700/80 text-gray-600 dark:text-amber-400 hover:scale-105 transition-all shadow-sm flex items-center justify-center"
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5" />}
+              {theme === 'dark' ? <SunMedium className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-gray-600" />}
             </button>
 
             {/* Authenticated State vs Guest State */}
@@ -197,9 +197,9 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               aria-label="Toggle Theme"
-              className="p-2 rounded-lg text-gray-500 dark:text-gray-400"
+              className="p-2 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700/80 text-gray-600 dark:text-amber-400 hover:scale-105 transition-all shadow-sm flex items-center justify-center"
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5" />}
+              {theme === 'dark' ? <SunMedium className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-gray-600" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
