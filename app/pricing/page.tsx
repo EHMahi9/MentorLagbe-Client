@@ -55,11 +55,10 @@ export default function PricingPage() {
           <span>Verified Membership & Subscription Plans</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-          Supercharge Your Tuition Reach with PRO
+          Affordable Membership Plans for Tutors & Students
         </h1>
         <p className="text-base text-gray-500 dark:text-gray-400">
-          Whether you are a student looking for priority mentor placement or a tutor seeking unlimited
-          batch listings, we have the right plan for you.
+          Get verified tutor badges, unlimited tuition postings, and priority applications for students across Bangladesh.
         </p>
       </div>
 

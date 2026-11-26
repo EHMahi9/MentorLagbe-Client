@@ -103,7 +103,7 @@ export default function HomePage() {
       role: 'Senior Math Tutor (BUET Alumnus)',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
       comment:
-        'As a tutor, the Pro plan has paid for itself multiple times over. Managing applicants and scheduling batches has never been this seamless.',
+        'As a tutor, posting batches and managing student applications in Dhaka is very convenient and reliable. The direct student connection works great.',
       rating: 5,
     },
   ];
