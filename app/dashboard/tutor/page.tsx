@@ -59,7 +59,7 @@ export default function TutorOverviewPage() {
 
         <Link
           href="/dashboard/tutor/post-tuition"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all self-start sm:self-auto"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all self-start sm:self-auto"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Post New Tuition</span>
@@ -95,7 +95,7 @@ export default function TutorOverviewPage() {
         <div className="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">Total Tuitions</span>
-            <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
               <BookOpen className="w-4 h-4" />
             </div>
           </div>
@@ -165,10 +165,10 @@ export default function TutorOverviewPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             href="/dashboard/tutor/post-tuition"
-            className="flex items-center justify-between p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-teal-500/40 bg-gray-50/60 dark:bg-gray-800/40 hover:bg-white dark:hover:bg-gray-800 transition-all group"
+            className="flex items-center justify-between p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-indigo-500/40 bg-gray-50/60 dark:bg-gray-800/40 hover:bg-white dark:hover:bg-gray-800 transition-all group"
           >
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-teal-50 dark:bg-teal-950/60 text-teal-600 flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 flex items-center justify-center">
                 <PlusCircle className="w-4 h-4" />
               </div>
               <div>

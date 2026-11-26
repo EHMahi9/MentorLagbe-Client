@@ -120,8 +120,8 @@ export default function AdminTuitionsPage() {
           onClick={() => setActiveTab('approved')}
           className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors ${
             activeTab === 'approved'
-              ? 'bg-teal-600 text-white shadow-sm'
-              : 'bg-teal-50 dark:bg-teal-950/40 text-teal-800 dark:text-teal-300 hover:bg-teal-100'
+              ? 'bg-indigo-600 text-white shadow-sm'
+              : 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-800 dark:text-indigo-300 hover:bg-indigo-100'
           }`}
         >
           <span>Approved</span>
@@ -189,7 +189,7 @@ export default function AdminTuitionsPage() {
                       <div className="space-y-0.5">
                         <Link
                           href={`/tuitions/${t._id}`}
-                          className="font-bold text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 flex items-center gap-1.5"
+                          className="font-bold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-1.5"
                         >
                           <span className="truncate max-w-xs">{t.title}</span>
                           <ExternalLink className="w-3.5 h-3.5 text-gray-400 shrink-0" />
@@ -200,7 +200,7 @@ export default function AdminTuitionsPage() {
 
                     {/* Subject */}
                     <td className="px-6 py-4">
-                      <span className="inline-block px-2.5 py-0.5 rounded text-[10px] font-semibold bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-400">
+                      <span className="inline-block px-2.5 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400">
                         {t.subject}
                       </span>
                     </td>

@@ -138,7 +138,7 @@ export default function ManageApplicantsPage() {
                     {/* Student Info */}
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center shrink-0">
+                        <div className="w-9 h-9 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center shrink-0">
                           {a.studentName?.charAt(0) || 'S'}
                         </div>
                         <div>
@@ -170,7 +170,7 @@ export default function ManageApplicantsPage() {
                         <p className="font-bold text-gray-900 dark:text-white truncate max-w-xs">
                           {a.tuitionTitle}
                         </p>
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-400">
+                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400">
                           {a.subject}
                         </span>
                       </div>

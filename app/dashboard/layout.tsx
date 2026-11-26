@@ -46,7 +46,7 @@ export default function DashboardLayout({
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 border-4 border-teal-600 border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
           <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">Loading your workspace...</p>
         </div>
       </div>
@@ -107,11 +107,11 @@ export default function DashboardLayout({
           {/* Brand Logo */}
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-md shadow-teal-600/20">
+              <div className="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-600/20">
                 <GraduationCap className="w-5 h-5" />
               </div>
               <span className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">
-                Mentor<span className="text-teal-600 dark:text-teal-400">Lagbe</span>
+                Mentor<span className="text-indigo-600 dark:text-indigo-400">Lagbe</span>
               </span>
             </Link>
             <button
@@ -127,7 +127,7 @@ export default function DashboardLayout({
             <img
               src={user.image || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80'}
               alt={user.name}
-              className="w-10 h-10 rounded-xl object-cover border border-teal-500/20 shrink-0"
+              className="w-10 h-10 rounded-xl object-cover border border-indigo-500/20 shrink-0"
             />
             <div className="truncate">
               <div className="flex items-center gap-1.5">
@@ -138,7 +138,7 @@ export default function DashboardLayout({
                   </span>
                 )}
               </div>
-              <span className="inline-block mt-0.5 px-2 py-0.5 rounded text-[10px] font-medium bg-teal-50 text-teal-700 dark:bg-teal-950/60 dark:text-teal-400 capitalize">
+              <span className="inline-block mt-0.5 px-2 py-0.5 rounded text-[10px] font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-400 capitalize">
                 {user.role}
               </span>
             </div>
@@ -159,11 +159,11 @@ export default function DashboardLayout({
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-colors ${
                     isActive
-                      ? 'bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-400 border border-teal-200/60 dark:border-teal-800/60'
+                      ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60'
                       : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/60 hover:text-gray-900 dark:hover:text-white'
                   }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-teal-600 dark:text-teal-400' : 'text-gray-400'}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400'}`} />
                   <span>{item.name}</span>
                 </Link>
               );
@@ -180,7 +180,7 @@ export default function DashboardLayout({
               onClick={() => setSidebarOpen(false)}
               className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-colors ${
                 pathname === '/dashboard/profile'
-                  ? 'bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-400 border border-teal-200/60 dark:border-teal-800/60'
+                  ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60'
                   : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/60 hover:text-gray-900 dark:hover:text-white'
               }`}
             >

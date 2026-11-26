@@ -10,10 +10,6 @@ import {
   Eye,
   EyeOff,
   ArrowRight,
-  Shield,
-  BookOpen,
-  UserCheck,
-  Zap,
 } from 'lucide-react';
 import { useAuth } from '../../lib/authContext';
 import { apiRequest } from '../../lib/api';
@@ -146,9 +142,9 @@ function SignInContent() {
     }
   };
 
-  const handleSignIn = async (overrideEmail?: string, overridePassword?: string) => {
-    const finalEmail = overrideEmail || email;
-    const finalPassword = overridePassword || password;
+  const handleSignIn = async () => {
+    const finalEmail = email;
+    const finalPassword = password;
 
     if (!finalEmail.trim() || !finalPassword) {
       toast.error('Please enter your email and password.');
@@ -193,22 +189,7 @@ function SignInContent() {
     handleSignIn();
   };
 
-  // 1-Click Demo Login Handlers
-  const handleQuickDemo = (role: 'admin' | 'tutor' | 'student') => {
-    if (role === 'admin') {
-      setEmail('admin@mentorlagbe.com');
-      setPassword('Admin@12345');
-      handleSignIn('admin@mentorlagbe.com', 'Admin@12345');
-    } else if (role === 'tutor') {
-      setEmail('tutor@mentorlagbe.com');
-      setPassword('Tutor@12345');
-      handleSignIn('tutor@mentorlagbe.com', 'Tutor@12345');
-    } else {
-      setEmail('student@mentorlagbe.com');
-      setPassword('Student@12345');
-      handleSignIn('student@mentorlagbe.com', 'Student@12345');
-    }
-  };
+
 
   return (
     <div className="min-h-[85vh] flex items-center justify-center px-4 py-12">
@@ -216,11 +197,11 @@ function SignInContent() {
         {/* Logo and Heading */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-flex items-center gap-2 group">
-            <div className="w-11 h-11 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-11 h-11 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
               <GraduationCap className="w-7 h-7" />
             </div>
             <span className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Mentor<span className="text-teal-600 dark:text-teal-400">Lagbe</span>
+              Mentor<span className="text-indigo-600 dark:text-indigo-400">Lagbe</span>
             </span>
           </Link>
           <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">Welcome back</h1>
@@ -243,7 +224,7 @@ function SignInContent() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
           </div>
@@ -260,7 +241,7 @@ function SignInContent() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
               <button
                 type="button"
@@ -275,7 +256,7 @@ function SignInContent() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-xl text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+            className="w-full py-3 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
           >
             {loading ? 'Authenticating...' : 'Sign In'}
             <ArrowRight className="w-4 h-4" />
@@ -287,67 +268,10 @@ function SignInContent() {
           <div id="google-btn-rendered" className="w-full flex justify-center"></div>
         </div>
 
-        {/* 1-Click Quick Demo Access (As demonstrated in the instruction video) */}
-        <div className="pt-2 border-t border-gray-100 dark:border-gray-700/80 space-y-2">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center gap-1">
-              <Zap className="w-3.5 h-3.5 text-amber-500" /> Quick Demo Access (1-Click)
-            </span>
-            <span className="text-[10px] text-gray-400">Instant Test Login</span>
-          </div>
-
-          <div className="space-y-1.5">
-            <button
-              type="button"
-              onClick={() => handleQuickDemo('admin')}
-              className="w-full flex items-center justify-between p-2.5 rounded-xl border border-rose-100 dark:border-rose-950/60 bg-rose-50/50 dark:bg-rose-950/30 hover:bg-rose-100/60 dark:hover:bg-rose-900/40 text-left transition-colors group"
-            >
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-rose-500" />
-                <div>
-                  <p className="text-xs font-bold text-gray-900 dark:text-white">Demo Admin Login</p>
-                  <p className="text-[10px] text-gray-500 dark:text-gray-400">admin@mentorlagbe.com</p>
-                </div>
-              </div>
-              <ArrowRight className="w-3.5 h-3.5 text-rose-400 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            <button
-              type="button"
-              onClick={() => handleQuickDemo('tutor')}
-              className="w-full flex items-center justify-between p-2.5 rounded-xl border border-teal-100 dark:border-teal-950/60 bg-teal-50/50 dark:bg-teal-950/30 hover:bg-teal-100/60 dark:hover:bg-teal-900/40 text-left transition-colors group"
-            >
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-                <div>
-                  <p className="text-xs font-bold text-gray-900 dark:text-white">Demo Tutor Login</p>
-                  <p className="text-[10px] text-gray-500 dark:text-gray-400">tutor@mentorlagbe.com</p>
-                </div>
-              </div>
-              <ArrowRight className="w-3.5 h-3.5 text-teal-500 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            <button
-              type="button"
-              onClick={() => handleQuickDemo('student')}
-              className="w-full flex items-center justify-between p-2.5 rounded-xl border border-blue-100 dark:border-blue-950/60 bg-blue-50/50 dark:bg-blue-950/30 hover:bg-blue-100/60 dark:hover:bg-blue-900/40 text-left transition-colors group"
-            >
-              <div className="flex items-center gap-2">
-                <UserCheck className="w-4 h-4 text-blue-500" />
-                <div>
-                  <p className="text-xs font-bold text-gray-900 dark:text-white">Demo Student Login</p>
-                  <p className="text-[10px] text-gray-500 dark:text-gray-400">student@mentorlagbe.com</p>
-                </div>
-              </div>
-              <ArrowRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-        </div>
-
         {/* Footer Link */}
         <div className="text-center pt-2 text-xs text-gray-500 dark:text-gray-400">
           Don&apos;t have an account?{' '}
-          <Link href="/sign-up" className="font-semibold text-teal-600 dark:text-teal-400 hover:underline">
+          <Link href="/sign-up" className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">
             Sign Up
           </Link>
         </div>

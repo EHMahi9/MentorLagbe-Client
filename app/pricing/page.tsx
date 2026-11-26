@@ -50,9 +50,9 @@ export default function PricingPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 space-y-16">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3">
-        <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-100 text-teal-800 dark:bg-teal-950/70 dark:text-teal-300">
-          <Zap className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-          <span>Transparent EdTech Subscription</span>
+        <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950/70 dark:text-indigo-300">
+          <Zap className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+          <span>Verified Membership & Subscription Plans</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">
           Supercharge Your Tuition Reach with PRO
@@ -84,19 +84,19 @@ export default function PricingPage() {
 
             <ul className="space-y-3 pt-6 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Up to 2 tuition listings (Tutors)</span>
               </li>
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Up to 5 saved tuition bookmarks (Students)</span>
               </li>
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Standard direct tuition applications</span>
               </li>
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Basic search and subject filters</span>
               </li>
             </ul>
@@ -122,8 +122,8 @@ export default function PricingPage() {
         </div>
 
         {/* MentorLagbe PRO */}
-        <div className="relative p-8 sm:p-10 rounded-3xl bg-white dark:bg-gray-800/90 border-2 border-teal-500 dark:border-teal-400 shadow-2xl flex flex-col justify-between">
-          <div className="absolute -top-4 right-8 px-3.5 py-1 rounded-full text-xs font-bold bg-teal-600 text-white tracking-wider uppercase shadow-md flex items-center gap-1">
+        <div className="relative p-8 sm:p-10 rounded-3xl bg-white dark:bg-gray-800/90 border-2 border-indigo-500 dark:border-indigo-400 shadow-2xl flex flex-col justify-between">
+          <div className="absolute -top-4 right-8 px-3.5 py-1 rounded-full text-xs font-bold bg-indigo-600 text-white tracking-wider uppercase shadow-md flex items-center gap-1">
             <Zap className="w-3.5 h-3.5" /> RECOMMENDED
           </div>
 
@@ -139,7 +139,7 @@ export default function PricingPage() {
             </p>
             <div className="pt-2">
               <div className="flex items-baseline gap-2">
-                <span className="text-5xl font-extrabold text-teal-600 dark:text-teal-400">
+                <span className="text-5xl font-extrabold text-indigo-600 dark:text-indigo-400">
                   {user?.role === 'student' ? '$10' : '$15'}
                 </span>
                 <span className="text-sm text-gray-400">
@@ -157,21 +157,21 @@ export default function PricingPage() {
 
             <ul className="space-y-3 pt-6 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>
                   <strong>Unlimited</strong> tuition posts & student bookmarks
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Golden PRO credential badge on profile and listings</span>
               </li>
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Top placement on Browse Tuitions page and search results</span>
               </li>
               <li className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-teal-500 shrink-0" />
+                <Check className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Instant notifications and priority review queue</span>
               </li>
             </ul>
@@ -189,7 +189,7 @@ export default function PricingPage() {
               <button
                 onClick={() => handleStripeCheckout(user?.role === 'student' ? 'student' : 'tutor')}
                 disabled={upgrading}
-                className="w-full py-3.5 text-center rounded-xl text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-600/30 transition-all hover:shadow-xl disabled:opacity-50"
+                className="w-full py-3.5 text-center rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-600/30 transition-all hover:shadow-xl disabled:opacity-50"
               >
                 {upgrading ? 'Connecting to Stripe...' : 'Subscribe with Stripe →'}
               </button>

@@ -111,24 +111,19 @@ export default function HomePage() {
   return (
     <div className="space-y-20 lg:space-y-28 pb-20">
       {/* 1. Hero / Banner Section */}
-      <section className="relative overflow-hidden pt-12 lg:pt-20 pb-16 bg-gradient-to-b from-teal-50/50 via-white to-transparent dark:from-gray-900/40 dark:via-gray-950 dark:to-gray-950">
+      <section className="relative overflow-hidden pt-12 lg:pt-20 pb-16 bg-gradient-to-b from-indigo-50/50 via-white to-transparent dark:from-gray-900/40 dark:via-gray-950 dark:to-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 dark:bg-teal-950/70 border border-teal-200 dark:border-teal-800 text-teal-800 dark:text-teal-300 text-xs font-semibold">
-                <GraduationCap className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-                <span>Next-Generation Tuition & Mentorship Platform</span>
-              </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-[1.15]">
-                Find Your Ideal <span className="text-teal-600 dark:text-teal-400">Tutor</span> or{' '}
-                <span className="text-teal-600 dark:text-teal-400">Mentorship Batch</span> Today.
+                Find Verified Home & Online <span className="text-indigo-600 dark:text-indigo-400">Tutors</span> Across{' '}
+                <span className="text-amber-500 dark:text-amber-400">Bangladesh</span>.
               </h1>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
-                Connect directly with certified educators and subject-matter mentors for school, HSC,
-                university coursework, and technical skills. Moderated listings with verified reviews.
+                Connect directly with qualified educators and university mentors from BUET, DU, DMC, and top institutions. Tailored for Class 1–12, SSC/HSC, English Medium, and Admission tests.
               </p>
 
               {/* Search Bar Form */}
@@ -148,7 +143,7 @@ export default function HomePage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all shrink-0"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all shrink-0"
                 >
                   Find Tutors
                 </button>
@@ -157,15 +152,15 @@ export default function HomePage() {
               {/* Trust Badges */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-2 text-xs text-gray-500 dark:text-gray-400">
                 <div className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-teal-500" />
+                  <ShieldCheck className="w-4 h-4 text-indigo-600" />
                   <span>100% Admin Moderated</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <GraduationCap className="w-4 h-4 text-teal-500" />
+                  <GraduationCap className="w-4 h-4 text-indigo-600" />
                   <span>BUET & DU Top Mentors</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-500" />
+                  <CheckCircle2 className="w-4 h-4 text-indigo-600" />
                   <span>Direct Enrollment</span>
                 </div>
               </div>
@@ -183,12 +178,12 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 text-white p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold">
+                      <div className="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold">
                         ★
                       </div>
                       <div>
                         <p className="text-sm font-bold">4.9 / 5.0 Average Rating</p>
-                        <p className="text-xs text-teal-200">Across 1,200+ completed mentorship sessions</p>
+                        <p className="text-xs text-indigo-200">Across 1,200+ completed mentorship sessions</p>
                       </div>
                     </div>
                   </div>
@@ -214,7 +209,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-bold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
+            <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
               EXPLORE BY DISCIPLINE
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mt-1">
@@ -223,7 +218,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/tuitions"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300"
           >
             <span>View all subjects</span>
             <ArrowRight className="w-4 h-4" />
@@ -237,13 +232,13 @@ export default function HomePage() {
               <Link
                 key={cat.name}
                 href={`/tuitions?subject=${encodeURIComponent(cat.name)}`}
-                className="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-gray-800/80 border border-gray-100 dark:border-gray-700/80 hover:border-teal-500/50 hover:shadow-lg transition-all group"
+                className="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-gray-800/80 border border-gray-100 dark:border-gray-700/80 hover:border-indigo-500/50 hover:shadow-lg transition-all group"
               >
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${cat.color} group-hover:scale-110 transition-transform`}>
                   <Icon className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  <h3 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     {cat.name}
                   </h3>
                   <span className="text-xs text-gray-500 dark:text-gray-400">{cat.count}</span>
@@ -257,7 +252,7 @@ export default function HomePage() {
       {/* 3. Dynamic Featured Tuitions Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <span className="text-xs font-bold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
+          <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
             ACTIVE ENROLLMENTS
           </span>
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -289,7 +284,7 @@ export default function HomePage() {
         <div className="text-center mt-10">
           <Link
             href="/tuitions"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900 hover:bg-teal-600 dark:hover:bg-teal-400 dark:hover:text-gray-900 transition-colors shadow-md"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900 hover:bg-indigo-600 dark:hover:bg-indigo-400 dark:hover:text-gray-900 transition-colors shadow-md"
           >
             <span>Browse All Tuitions</span>
             <ArrowRight className="w-4 h-4" />
@@ -301,7 +296,7 @@ export default function HomePage() {
       <section id="how-it-works" className="bg-gray-100/60 dark:bg-gray-900/40 py-16 lg:py-20 border-y border-gray-200/60 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-bold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
+            <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
               SIMPLE 4-STEP PROCESS
             </span>
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -318,7 +313,7 @@ export default function HomePage() {
                 key={item.step}
                 className="relative p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700/80 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="text-3xl font-extrabold text-teal-600/20 dark:text-teal-400/20 mb-3">
+                <div className="text-3xl font-extrabold text-indigo-600/20 dark:text-indigo-400/20 mb-3">
                   {item.step}
                 </div>
                 <h3 className="text-base font-bold text-gray-900 dark:text-white mb-2">
@@ -336,7 +331,7 @@ export default function HomePage() {
       {/* 5. Pricing / Subscription Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <span className="text-xs font-bold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
+          <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
             CHOOSE YOUR PLAN
           </span>
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -367,16 +362,16 @@ export default function HomePage() {
 
               <ul className="space-y-3 pt-4 text-xs text-gray-600 dark:text-gray-300">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" /> Up to 2 tuition posts (Tutor)
+                  <Check className="w-4 h-4 text-indigo-600" /> Up to 2 tuition posts (Tutor)
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" /> Up to 5 tuition bookmarks (Student)
+                  <Check className="w-4 h-4 text-indigo-600" /> Up to 5 tuition bookmarks (Student)
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" /> Direct tuition applications
+                  <Check className="w-4 h-4 text-indigo-600" /> Direct tuition applications
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" /> Basic profile & search filters
+                  <Check className="w-4 h-4 text-indigo-600" /> Basic profile & search filters
                 </li>
               </ul>
             </div>
@@ -387,7 +382,7 @@ export default function HomePage() {
                   Included in PRO
                 </span>
               ) : user ? (
-                <span className="block w-full py-3 text-center rounded-xl text-sm font-semibold text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800">
+                <span className="block w-full py-3 text-center rounded-xl text-sm font-semibold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800">
                   Current Free Plan
                 </span>
               ) : (
@@ -402,8 +397,8 @@ export default function HomePage() {
           </div>
 
           {/* MentorLagbe PRO */}
-          <div className="relative p-8 rounded-3xl bg-white dark:bg-gray-800 border-2 border-teal-500 dark:border-teal-400 shadow-xl flex flex-col justify-between">
-            <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full text-[11px] font-bold bg-teal-600 text-white tracking-wider uppercase shadow-md">
+          <div className="relative p-8 rounded-3xl bg-white dark:bg-gray-800 border-2 border-indigo-500 dark:border-indigo-400 shadow-xl flex flex-col justify-between">
+            <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full text-[11px] font-bold bg-indigo-600 text-white tracking-wider uppercase shadow-md">
               RECOMMENDED
             </div>
 
@@ -418,24 +413,24 @@ export default function HomePage() {
                 Unlimited reach, verified credential badges, and priority matching.
               </p>
               <div className="pt-2">
-                <span className="text-4xl font-extrabold text-teal-600 dark:text-teal-400">$15</span>
+                <span className="text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">$15</span>
                 <span className="text-sm text-gray-400"> /mo for Tutors</span>
                 <span className="text-xs text-gray-400 block mt-1">or $10/mo for Students</span>
               </div>
 
               <ul className="space-y-3 pt-4 text-xs text-gray-600 dark:text-gray-300">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" />
+                  <Check className="w-4 h-4 text-indigo-600" />
                   <strong>Unlimited</strong> tuition posts & bookmarks
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" /> Golden PRO verification badge
+                  <Check className="w-4 h-4 text-indigo-600" /> Golden PRO verification badge
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" /> Priority listing in search & category filters
+                  <Check className="w-4 h-4 text-indigo-600" /> Priority listing in search & category filters
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-teal-500" /> Priority applicant notifications & reviews
+                  <Check className="w-4 h-4 text-indigo-600" /> Priority applicant notifications & reviews
                 </li>
               </ul>
             </div>
@@ -451,7 +446,7 @@ export default function HomePage() {
               ) : (
                 <Link
                   href="/pricing"
-                  className="block w-full py-3 text-center rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all"
+                  className="block w-full py-3 text-center rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all"
                 >
                   Upgrade to Pro →
                 </Link>
@@ -467,19 +462,19 @@ export default function HomePage() {
         <div className="p-8 rounded-3xl bg-gray-900 text-white shadow-2xl mb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-gray-800">
             <div className="pt-4 md:pt-0">
-              <p className="text-3xl sm:text-4xl font-extrabold text-teal-400">1,500+</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-indigo-400">1,500+</p>
               <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Active Students</p>
             </div>
             <div className="pt-4 md:pt-0">
-              <p className="text-3xl sm:text-4xl font-extrabold text-teal-400">320+</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-indigo-400">320+</p>
               <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Verified Mentors</p>
             </div>
             <div className="pt-4 md:pt-0">
-              <p className="text-3xl sm:text-4xl font-extrabold text-teal-400">98%</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-indigo-400">98%</p>
               <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Satisfaction Rate</p>
             </div>
             <div className="pt-4 md:pt-0">
-              <p className="text-3xl sm:text-4xl font-extrabold text-teal-400">50+</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-indigo-400">50+</p>
               <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Subjects Covered</p>
             </div>
           </div>
@@ -487,7 +482,7 @@ export default function HomePage() {
 
         {/* Testimonials */}
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <span className="text-xs font-bold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
+          <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
             COMMUNITY VOICES
           </span>
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">

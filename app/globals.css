@@ -6,8 +6,9 @@
   :root {
     --background: #f8fafc;
     --foreground: #0f172a;
-    --primary: #0d9488;
-    --primary-hover: #0f766e;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --accent: #f59e0b;
     --card: #ffffff;
     --card-border: #e2e8f0;
   }
@@ -15,8 +16,9 @@
   .dark {
     --background: #090d16;
     --foreground: #f1f5f9;
-    --primary: #14b8a6;
-    --primary-hover: #2dd4bf;
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --accent: #fbbf24;
     --card: #111827;
     --card-border: #1f2937;
   }

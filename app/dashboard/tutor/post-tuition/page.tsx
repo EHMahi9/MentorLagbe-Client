@@ -173,7 +173,7 @@ export default function PostTuitionPage() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="e.g., University Advanced Calculus & Linear Algebra Mentorship"
-            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
@@ -186,7 +186,7 @@ export default function PostTuitionPage() {
             <select
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               {subjects.map((sub) => (
                 <option key={sub} value={sub}>
@@ -203,7 +203,7 @@ export default function PostTuitionPage() {
             <select
               value={classLevel}
               onChange={(e) => setClassLevel(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               {classLevels.map((lvl) => (
                 <option key={lvl} value={lvl}>
@@ -226,7 +226,7 @@ export default function PostTuitionPage() {
                 onClick={() => setMode('Online')}
                 className={`py-2 rounded-xl text-xs font-bold border transition-colors ${
                   mode === 'Online'
-                    ? 'bg-teal-600 text-white border-teal-600'
+                    ? 'bg-indigo-600 text-white border-indigo-600'
                     : 'bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700'
                 }`}
               >
@@ -237,7 +237,7 @@ export default function PostTuitionPage() {
                 onClick={() => setMode('Offline')}
                 className={`py-2 rounded-xl text-xs font-bold border transition-colors ${
                   mode === 'Offline'
-                    ? 'bg-teal-600 text-white border-teal-600'
+                    ? 'bg-indigo-600 text-white border-indigo-600'
                     : 'bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700'
                 }`}
               >
@@ -255,7 +255,7 @@ export default function PostTuitionPage() {
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               placeholder={mode === 'Online' ? 'Online (Zoom / Meet)' : 'e.g., Dhanmondi, Dhaka'}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function PostTuitionPage() {
               value={monthlyFee}
               onChange={(e) => setMonthlyFee(e.target.value)}
               placeholder="e.g., 5500"
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
@@ -287,7 +287,7 @@ export default function PostTuitionPage() {
               value={daysPerWeek}
               onChange={(e) => setDaysPerWeek(e.target.value)}
               placeholder="e.g., 3 days / week"
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
         </div>
@@ -297,7 +297,7 @@ export default function PostTuitionPage() {
           <label className="text-xs font-semibold text-gray-700 dark:text-gray-300 block mb-1">
             Banner Image (Direct Upload via ImgBB API)
           </label>
-          <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed border-gray-200 dark:border-gray-700 hover:border-teal-500 dark:hover:border-teal-500 rounded-2xl transition-colors">
+          <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-500 rounded-2xl transition-colors">
             <div className="space-y-2 text-center">
               {bannerPreview ? (
                 <div className="relative mx-auto w-48 h-28 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -307,7 +307,7 @@ export default function PostTuitionPage() {
                 <ImageIcon className="mx-auto h-10 w-10 text-gray-400" />
               )}
               <div className="flex text-xs text-gray-600 dark:text-gray-400 justify-center">
-                <label className="relative cursor-pointer rounded-md font-bold text-teal-600 dark:text-teal-400 hover:underline">
+                <label className="relative cursor-pointer rounded-md font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
                   <span>Upload a file</span>
                   <input
                     type="file"
@@ -334,7 +334,7 @@ export default function PostTuitionPage() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Describe what students will learn, syllabus covered, prerequisite knowledge, and your teaching approach..."
-            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
@@ -349,7 +349,7 @@ export default function PostTuitionPage() {
           <button
             type="submit"
             disabled={submitting || uploadingImage}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all disabled:opacity-50"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all disabled:opacity-50"
           >
             {submitting ? 'Submitting for Approval...' : 'Publish Tuition Post'}
             <ArrowRight className="w-4 h-4" />

@@ -119,7 +119,7 @@ export default function ProfilePage() {
             <img
               src={previewUrl || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80'}
               alt={user?.name}
-              className="w-24 h-24 rounded-3xl object-cover border-2 border-teal-500/30 shadow-md group-hover:opacity-90 transition-opacity"
+              className="w-24 h-24 rounded-3xl object-cover border-2 border-indigo-500/30 shadow-md group-hover:opacity-90 transition-opacity"
             />
             <label className="absolute inset-0 rounded-3xl bg-black/40 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity">
               <Camera className="w-6 h-6" />
@@ -167,7 +167,7 @@ export default function ProfilePage() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function ProfilePage() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="e.g., +880-1700-123456"
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function ProfilePage() {
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             placeholder="Tell students or mentors about your university, experience, or academic goals..."
-            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
@@ -224,7 +224,7 @@ export default function ProfilePage() {
           <button
             type="submit"
             disabled={saving || uploadingImage}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all disabled:opacity-50"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all disabled:opacity-50"
           >
             <Save className="w-4 h-4" />
             <span>{saving ? 'Saving...' : 'Save Profile Changes'}</span>

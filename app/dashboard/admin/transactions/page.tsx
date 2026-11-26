@@ -48,15 +48,15 @@ export default function AdminTransactionsPage() {
           </p>
         </div>
 
-        <div className="p-3.5 rounded-2xl bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center">
+        <div className="p-3.5 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 flex items-center gap-3">
+          <div className="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center">
             <DollarSign className="w-5 h-5" />
           </div>
           <div>
-            <p className="text-[10px] uppercase font-bold text-teal-800 dark:text-teal-300">
+            <p className="text-[10px] uppercase font-bold text-indigo-800 dark:text-indigo-300">
               Total Revenue
             </p>
-            <p className="text-lg font-black text-teal-900 dark:text-white">
+            <p className="text-lg font-black text-indigo-900 dark:text-white">
               ${totalRevenue} USD
             </p>
           </div>
@@ -98,13 +98,13 @@ export default function AdminTransactionsPage() {
 
                     {/* Plan */}
                     <td className="px-6 py-4">
-                      <span className="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-teal-50 dark:bg-teal-950/60 text-teal-800 dark:text-teal-300">
+                      <span className="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300">
                         {t.planName}
                       </span>
                     </td>
 
                     {/* Amount */}
-                    <td className="px-6 py-4 font-extrabold text-teal-700 dark:text-teal-400 text-sm">
+                    <td className="px-6 py-4 font-extrabold text-indigo-700 dark:text-indigo-400 text-sm">
                       ${t.amount} {t.currency?.toUpperCase() || 'USD'}
                     </td>
 

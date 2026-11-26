@@ -106,10 +106,10 @@ export default function TuitionCard({
             onClick={handleToggleBookmark}
             disabled={bookmarking}
             aria-label="Bookmark tuition"
-            className="absolute top-3 right-3 p-2 rounded-full bg-white/90 dark:bg-gray-900/90 text-gray-700 dark:text-gray-200 hover:text-teal-600 dark:hover:text-teal-400 shadow-md backdrop-blur-sm transition-transform active:scale-90"
+            className="absolute top-3 right-3 p-2 rounded-full bg-white/90 dark:bg-gray-900/90 text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-md backdrop-blur-sm transition-transform active:scale-90"
           >
             <Bookmark
-              className={`w-4 h-4 ${bookmarked ? 'fill-teal-600 text-teal-600 dark:fill-teal-400 dark:text-teal-400' : ''}`}
+              className={`w-4 h-4 ${bookmarked ? 'fill-indigo-600 text-indigo-600 dark:fill-indigo-400 dark:text-indigo-400' : ''}`}
             />
           </button>
         )}
@@ -119,16 +119,16 @@ export default function TuitionCard({
       <div className="flex flex-col flex-1 p-5">
         {/* Subject & Verified */}
         <div className="flex items-center justify-between gap-2 mb-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/50 px-2.5 py-0.5 rounded-md">
+          <span className="text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/50 px-2.5 py-0.5 rounded-md">
             {tuition.subject}
           </span>
           <span className="inline-flex items-center gap-1 text-[11px] text-gray-500 dark:text-gray-400">
-            <CheckCircle2 className="w-3.5 h-3.5 text-teal-500" /> Verified
+            <CheckCircle2 className="w-3.5 h-3.5 text-indigo-500" /> Verified
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-2 leading-snug group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+        <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
           {tuition.title}
         </h3>
 
@@ -141,7 +141,7 @@ export default function TuitionCard({
         <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700/60 space-y-2 text-xs text-gray-600 dark:text-gray-300">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1.5 text-gray-500 dark:text-gray-400 truncate">
-              <User className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0" />
+              <User className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
               <span className="truncate font-medium">{tuition.tutorName}</span>
             </div>
             <div className="flex items-center gap-1 text-gray-500 dark:text-gray-400 shrink-0">
@@ -160,14 +160,14 @@ export default function TuitionCard({
         <div className="mt-auto pt-4 flex items-center justify-between">
           <div>
             <span className="text-[11px] text-gray-400 block">Monthly Fee</span>
-            <span className="text-lg font-extrabold text-teal-700 dark:text-teal-400">
+            <span className="text-lg font-extrabold text-indigo-700 dark:text-indigo-400">
               ৳{tuition.monthlyFee.toLocaleString()}
             </span>
           </div>
 
           <Link
             href={`/tuitions/${tuition._id}`}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gray-100 dark:bg-gray-700 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 dark:hover:text-white text-gray-800 dark:text-gray-200 transition-all duration-200 group-hover:bg-teal-600 group-hover:text-white"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gray-100 dark:bg-gray-700 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-600 dark:hover:text-white text-gray-800 dark:text-gray-200 transition-all duration-200 group-hover:bg-indigo-600 group-hover:text-white"
           >
             <span>View Details</span>
             <ArrowRight className="w-3.5 h-3.5" />

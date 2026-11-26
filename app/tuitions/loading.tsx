@@ -47,7 +47,7 @@ export default function TuitionsLoading() {
                   <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800"></div>
                   <div className="h-4 w-24 bg-gray-200 dark:bg-gray-800 rounded"></div>
                 </div>
-                <div className="h-6 w-20 bg-teal-200 dark:bg-teal-900/60 rounded-lg"></div>
+                <div className="h-6 w-20 bg-indigo-200 dark:bg-indigo-900/60 rounded-lg"></div>
               </div>
             </div>
           </div>

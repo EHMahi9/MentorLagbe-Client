@@ -23,7 +23,7 @@ export default function PaymentCancelPage() {
       <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
         <Link
           href="/pricing"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md transition-all"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md transition-all"
         >
           <RefreshCw className="w-3.5 h-3.5" />
           <span>Try Again</span>

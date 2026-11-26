@@ -178,7 +178,7 @@ export default function MyTuitionsPage() {
 
         <Link
           href="/dashboard/tutor/post-tuition"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all self-start sm:self-auto"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all self-start sm:self-auto"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Post New Tuition</span>
@@ -226,7 +226,7 @@ export default function MyTuitionsPage() {
                     {/* Subject & Level */}
                     <td className="px-6 py-4">
                       <div className="space-y-1">
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-400">
+                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400">
                           {t.subject}
                         </span>
                         <p className="text-[11px] text-gray-500 dark:text-gray-400">Class {t.classLevel}</p>
@@ -262,7 +262,7 @@ export default function MyTuitionsPage() {
                         <Link
                           href={`/tuitions/${t._id}`}
                           aria-label="View Tuition"
-                          className="p-1.5 rounded-lg text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                          className="p-1.5 rounded-lg text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                         >
                           <Eye className="w-4 h-4" />
                         </Link>
@@ -301,7 +301,7 @@ export default function MyTuitionsPage() {
           </div>
           <Link
             href="/dashboard/tutor/post-tuition"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-teal-600 text-white shadow-md shadow-teal-600/30"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white shadow-md shadow-indigo-600/30"
           >
             <span>Post Tuition</span>
           </Link>
@@ -411,7 +411,7 @@ export default function MyTuitionsPage() {
                 <button
                   type="submit"
                   disabled={savingEdit}
-                  className="inline-flex items-center gap-1.5 px-5 py-2 rounded-xl font-bold bg-teal-600 hover:bg-teal-700 text-white"
+                  className="inline-flex items-center gap-1.5 px-5 py-2 rounded-xl font-bold bg-indigo-600 hover:bg-indigo-700 text-white"
                 >
                   <Save className="w-3.5 h-3.5" />
                   <span>{savingEdit ? 'Saving...' : 'Save Changes'}</span>

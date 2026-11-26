@@ -74,7 +74,7 @@ export default function SavedTuitionsPage() {
           </div>
           <Link
             href="/tuitions"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-teal-600 text-white shadow-md shadow-teal-600/30"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white shadow-md shadow-indigo-600/30"
           >
             <span>Explore Tuitions</span>
             <ArrowRight className="w-4 h-4" />

@@ -6,12 +6,12 @@ export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 py-16 text-center">
       <div className="max-w-md mx-auto space-y-6">
-        <div className="w-20 h-20 rounded-3xl bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center mx-auto shadow-xl">
+        <div className="w-20 h-20 rounded-3xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto shadow-xl">
           <Compass className="w-10 h-10 animate-spin-slow" />
         </div>
 
         <div className="space-y-2">
-          <span className="text-xs font-bold text-teal-600 dark:text-teal-400 tracking-widest uppercase">
+          <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-widest uppercase">
             404 ERROR
           </span>
           <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -25,7 +25,7 @@ export default function NotFound() {
         <div className="flex items-center justify-center gap-3 pt-2">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all"
           >
             <Home className="w-4 h-4" />
             <span>Back to Home</span>

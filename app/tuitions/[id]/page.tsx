@@ -217,7 +217,7 @@ export default function TuitionDetailsPage({
         <p className="text-sm text-gray-500 dark:text-gray-400">{error || 'This tuition does not exist.'}</p>
         <Link
           href="/tuitions"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-teal-600 text-white"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 text-white"
         >
           <ArrowLeft className="w-4 h-4" /> Back to All Tuitions
         </Link>
@@ -230,7 +230,7 @@ export default function TuitionDetailsPage({
       {/* Navigation Breadcrumb */}
       <Link
         href="/tuitions"
-        className="inline-flex items-center gap-2 text-xs font-semibold text-gray-500 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+        className="inline-flex items-center gap-2 text-xs font-semibold text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
       >
         <ArrowLeft className="w-4 h-4" /> Back to All Tuitions
       </Link>
@@ -259,7 +259,7 @@ export default function TuitionDetailsPage({
               <button
                 onClick={handleShare}
                 aria-label="Share"
-                className="p-2.5 rounded-full bg-white/90 dark:bg-gray-900/90 text-gray-700 dark:text-gray-200 hover:text-teal-600 dark:hover:text-teal-400 shadow-md backdrop-blur-sm transition-transform active:scale-95"
+                className="p-2.5 rounded-full bg-white/90 dark:bg-gray-900/90 text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-md backdrop-blur-sm transition-transform active:scale-95"
               >
                 <Share2 className="w-4 h-4" />
               </button>
@@ -267,10 +267,10 @@ export default function TuitionDetailsPage({
                 <button
                   onClick={handleToggleBookmark}
                   aria-label="Bookmark"
-                  className="p-2.5 rounded-full bg-white/90 dark:bg-gray-900/90 text-gray-700 dark:text-gray-200 hover:text-teal-600 dark:hover:text-teal-400 shadow-md backdrop-blur-sm transition-transform active:scale-95"
+                  className="p-2.5 rounded-full bg-white/90 dark:bg-gray-900/90 text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-md backdrop-blur-sm transition-transform active:scale-95"
                 >
                   <Bookmark
-                    className={`w-4 h-4 ${bookmarked ? 'fill-teal-600 text-teal-600 dark:fill-teal-400 dark:text-teal-400' : ''}`}
+                    className={`w-4 h-4 ${bookmarked ? 'fill-indigo-600 text-indigo-600 dark:fill-indigo-400 dark:text-indigo-400' : ''}`}
                   />
                 </button>
               )}
@@ -280,7 +280,7 @@ export default function TuitionDetailsPage({
           {/* Title & Badges */}
           <div className="space-y-4">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-400 border border-teal-200 dark:border-teal-800">
+              <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
                 {tuition.subject}
               </span>
               <span className="px-3 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
@@ -326,14 +326,14 @@ export default function TuitionDetailsPage({
               <img
                 src={tuition.tutorProfile?.image || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'}
                 alt={tuition.tutorName}
-                className="w-16 h-16 rounded-2xl object-cover border-2 border-teal-500/30"
+                className="w-16 h-16 rounded-2xl object-cover border-2 border-indigo-500/30"
               />
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
                   <h3 className="text-base font-bold text-gray-900 dark:text-white">
                     {tuition.tutorName}
                   </h3>
-                  <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-teal-100 dark:bg-teal-900/60 text-teal-800 dark:text-teal-300">
+                  <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-100 dark:bg-indigo-900/60 text-indigo-800 dark:text-indigo-300">
                     Verified Mentor
                   </span>
                 </div>
@@ -358,7 +358,7 @@ export default function TuitionDetailsPage({
                 MONTHLY TUITION FEE
               </span>
               <div className="flex items-baseline gap-1 mt-1">
-                <span className="text-3xl sm:text-4xl font-extrabold text-teal-600 dark:text-teal-400">
+                <span className="text-3xl sm:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">
                   ৳{tuition.monthlyFee.toLocaleString()}
                 </span>
                 <span className="text-xs text-gray-400">/ month</span>
@@ -377,7 +377,7 @@ export default function TuitionDetailsPage({
               </div>
               <div className="py-2.5 flex items-center justify-between">
                 <span className="text-gray-500 dark:text-gray-400">Delivery Mode</span>
-                <span className="font-semibold text-teal-600 dark:text-teal-400">{tuition.mode}</span>
+                <span className="font-semibold text-indigo-600 dark:text-indigo-400">{tuition.mode}</span>
               </div>
               <div className="py-2.5 flex items-center justify-between">
                 <span className="text-gray-500 dark:text-gray-400">Location</span>
@@ -401,7 +401,7 @@ export default function TuitionDetailsPage({
                 TUITION MENTOR
               </span>
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-teal-600 text-white font-bold flex items-center justify-center text-sm">
+                <div className="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center text-sm">
                   {tuition.tutorName.charAt(0)}
                 </div>
                 <div className="truncate">
@@ -435,7 +435,7 @@ export default function TuitionDetailsPage({
                   </button>
                   <Link
                     href="/dashboard/student/my-applications"
-                    className="text-xs text-teal-600 dark:text-teal-400 hover:underline block"
+                    className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline block"
                   >
                     Check application status on your Dashboard
                   </Link>
@@ -443,7 +443,7 @@ export default function TuitionDetailsPage({
               ) : (
                 <button
                   onClick={handleOpenApplyModal}
-                  className="w-full py-3.5 rounded-xl text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-600/30 transition-all hover:shadow-xl"
+                  className="w-full py-3.5 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-600/30 transition-all hover:shadow-xl"
                 >
                   Apply Now
                 </button>
@@ -465,7 +465,7 @@ export default function TuitionDetailsPage({
             </button>
 
             <div>
-              <span className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-widest">
+              <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
                 BOOKING FORM
               </span>
               <h3 className="text-xl font-extrabold text-gray-900 dark:text-white mt-1">
@@ -487,7 +487,7 @@ export default function TuitionDetailsPage({
                   value={studentPhone}
                   onChange={(e) => setStudentPhone(e.target.value)}
                   placeholder="e.g., +880-1700-123456"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
@@ -501,7 +501,7 @@ export default function TuitionDetailsPage({
                   value={preferredSchedule}
                   onChange={(e) => setPreferredSchedule(e.target.value)}
                   placeholder="e.g., Evenings (Mon, Wed, Fri 7:00 PM) or Weekends"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
@@ -514,7 +514,7 @@ export default function TuitionDetailsPage({
                   value={studentNote}
                   onChange={(e) => setStudentNote(e.target.value)}
                   placeholder="Tell the tutor about your syllabus, weak points, or specific topics you want to prioritize..."
-                  className="w-full px-3.5 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3.5 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
@@ -529,7 +529,7 @@ export default function TuitionDetailsPage({
                 <button
                   type="submit"
                   disabled={submittingApp}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all disabled:opacity-50"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all disabled:opacity-50"
                 >
                   {submittingApp ? 'Submitting...' : 'Confirm Application'}
                   <Send className="w-4 h-4" />

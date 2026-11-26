@@ -37,7 +37,7 @@ export default function ErrorBoundary({
         <div className="flex items-center justify-center gap-3 pt-2">
           <button
             onClick={() => reset()}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all"
           >
             <RotateCcw className="w-4 h-4" />
             <span>Try Again</span>

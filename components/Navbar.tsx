@@ -47,11 +47,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand Name */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-teal-600 dark:bg-teal-500 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-indigo-600 dark:bg-indigo-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
               <GraduationCap className="w-6 h-6" />
             </div>
             <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Mentor<span className="text-teal-600 dark:text-teal-400">Lagbe</span>
+              Mentor<span className="text-indigo-600 dark:text-indigo-400">Lagbe</span>
             </span>
           </Link>
 
@@ -65,7 +65,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/40'
+                      ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40'
                       : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/60'
                   }`}
                 >
@@ -112,7 +112,7 @@ export default function Navbar() {
                   <img
                     src={user.image || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80'}
                     alt={user.name}
-                    className="w-8 h-8 rounded-full object-cover border border-teal-500/30"
+                    className="w-8 h-8 rounded-full object-cover border border-indigo-500/30"
                   />
                   <ChevronDown className="w-4 h-4 text-gray-400 mr-1" />
                 </button>
@@ -135,7 +135,7 @@ export default function Navbar() {
                       onClick={() => setUserDropdownOpen(false)}
                       className="flex items-center gap-2.5 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/60"
                     >
-                      <LayoutDashboard className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+                      <LayoutDashboard className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                       Dashboard
                     </Link>
 
@@ -178,13 +178,13 @@ export default function Navbar() {
               <div className="flex items-center gap-2.5">
                 <Link
                   href="/sign-in"
-                  className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
                   Sign In
                 </Link>
                 <Link
                   href="/sign-up"
-                  className="px-4 py-2 rounded-lg text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-sm shadow-teal-600/30 transition-all hover:shadow-md"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm shadow-indigo-600/30 transition-all hover:shadow-md"
                 >
                   Sign Up
                 </Link>
@@ -242,7 +242,7 @@ export default function Navbar() {
                 <Link
                   href={getDashboardHref()}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded-lg text-sm font-medium text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/40"
+                  className="block px-3 py-2 rounded-lg text-sm font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40"
                 >
                   Dashboard
                 </Link>
@@ -275,7 +275,7 @@ export default function Navbar() {
                 <Link
                   href="/sign-up"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full text-center py-2.5 rounded-lg text-sm font-semibold bg-teal-600 text-white"
+                  className="w-full text-center py-2.5 rounded-lg text-sm font-semibold bg-indigo-600 text-white"
                 >
                   Sign Up
                 </Link>

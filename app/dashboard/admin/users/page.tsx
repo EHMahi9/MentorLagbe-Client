@@ -95,7 +95,7 @@ export default function AdminUsersPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search users..."
-            className="w-full pl-9 pr-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full pl-9 pr-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
       </div>
@@ -162,7 +162,7 @@ export default function AdminUsersPage() {
                           u.role === 'admin'
                             ? 'bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300'
                             : u.role === 'tutor'
-                            ? 'bg-teal-100 text-teal-800 dark:bg-teal-950/60 dark:text-teal-300'
+                            ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300'
                             : 'bg-blue-100 text-blue-800 dark:bg-blue-950/60 dark:text-blue-300'
                         }`}
                       >
@@ -176,7 +176,7 @@ export default function AdminUsersPage() {
                         disabled={updatingId === u._id}
                         value={u.role}
                         onChange={(e) => handleRoleChange(u._id, e.target.value)}
-                        className="px-3 py-1.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs font-semibold text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 disabled:opacity-50"
+                        className="px-3 py-1.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs font-semibold text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:opacity-50"
                       >
                         <option value="student">Student</option>
                         <option value="tutor">Tutor</option>

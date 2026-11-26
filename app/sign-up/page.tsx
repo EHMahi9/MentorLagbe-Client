@@ -82,11 +82,11 @@ export default function SignUpPage() {
         {/* Logo and Heading */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-flex items-center gap-2 group">
-            <div className="w-11 h-11 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-11 h-11 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
               <GraduationCap className="w-7 h-7" />
             </div>
             <span className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Mentor<span className="text-teal-600 dark:text-teal-400">Lagbe</span>
+              Mentor<span className="text-indigo-600 dark:text-indigo-400">Lagbe</span>
             </span>
           </Link>
           <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">Create an Account</h1>
@@ -106,11 +106,11 @@ export default function SignUpPage() {
               onClick={() => setRole('student')}
               className={`flex items-center gap-2.5 p-3 rounded-2xl border text-left transition-all ${
                 role === 'student'
-                  ? 'border-teal-500 bg-teal-50/60 dark:bg-teal-950/40 text-teal-900 dark:text-teal-200 shadow-sm'
+                  ? 'border-indigo-500 bg-indigo-50/60 dark:bg-indigo-950/40 text-indigo-900 dark:text-indigo-200 shadow-sm'
                   : 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/40 text-gray-600 dark:text-gray-400'
               }`}
             >
-              <UserCheck className={`w-5 h-5 ${role === 'student' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-400'}`} />
+              <UserCheck className={`w-5 h-5 ${role === 'student' ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400'}`} />
               <div>
                 <p className="text-xs font-bold">Student</p>
                 <p className="text-[10px] text-gray-500 dark:text-gray-400">Seeking mentors</p>
@@ -122,11 +122,11 @@ export default function SignUpPage() {
               onClick={() => setRole('tutor')}
               className={`flex items-center gap-2.5 p-3 rounded-2xl border text-left transition-all ${
                 role === 'tutor'
-                  ? 'border-teal-500 bg-teal-50/60 dark:bg-teal-950/40 text-teal-900 dark:text-teal-200 shadow-sm'
+                  ? 'border-indigo-500 bg-indigo-50/60 dark:bg-indigo-950/40 text-indigo-900 dark:text-indigo-200 shadow-sm'
                   : 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/40 text-gray-600 dark:text-gray-400'
               }`}
             >
-              <BookOpen className={`w-5 h-5 ${role === 'tutor' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-400'}`} />
+              <BookOpen className={`w-5 h-5 ${role === 'tutor' ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400'}`} />
               <div>
                 <p className="text-xs font-bold">Tutor</p>
                 <p className="text-[10px] text-gray-500 dark:text-gray-400">Offering batches</p>
@@ -149,7 +149,7 @@ export default function SignUpPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g., Nusrat Jahan"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function SignUpPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
           </div>
@@ -183,7 +183,7 @@ export default function SignUpPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
               <button
                 type="button"
@@ -198,7 +198,7 @@ export default function SignUpPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-xl text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+            className="w-full py-3 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
           >
             {loading ? 'Creating Account...' : 'Complete Registration'}
             <ArrowRight className="w-4 h-4" />
@@ -208,7 +208,7 @@ export default function SignUpPage() {
         {/* Footer Link */}
         <div className="text-center pt-2 text-xs text-gray-500 dark:text-gray-400">
           Already have an account?{' '}
-          <Link href="/sign-in" className="font-semibold text-teal-600 dark:text-teal-400 hover:underline">
+          <Link href="/sign-in" className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">
             Sign In
           </Link>
         </div>

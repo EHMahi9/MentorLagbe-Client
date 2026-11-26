@@ -10,15 +10,15 @@
 ---
 
 ## 🌐 Live Links & Repositories
-- **Live Website:** [MentorLagbe on Vercel](https://mentor-lagbe.vercel.app) *(or your deployed Vercel URL)*
+- **Live Website:** [MentorLagbe on Vercel](https://mentorlagbe-five.vercel.app) *(or your deployed Vercel URL)*
 - **Client Repository:** [https://github.com/EHMahi9/MentorLagbe-Client](https://github.com/EHMahi9/MentorLagbe-Client)
 - **Server Repository:** [https://github.com/EHMahi9/MentorLagbe-Server](https://github.com/EHMahi9/MentorLagbe-Server)
 - **Backend API Base URL:** [https://mentorlagbe-server.onrender.com/api](https://mentorlagbe-server.onrender.com/api)
 
 ---
 
-## 🔐 Demo Credentials (1-Click Login Available)
-Quick demo login buttons are built directly into the Sign-in page for instant evaluation:
+## 🔐 Test Evaluation Credentials
+Use the following verified credentials to log in manually via the Sign In page:
 
 | Role | Email | Password | Allowed Capabilities |
 | :--- | :--- | :--- | :--- |

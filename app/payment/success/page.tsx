@@ -106,7 +106,7 @@ function PaymentSuccessContent() {
       <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
         <Link
           href={getDashboardLink()}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/30 transition-all"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/30 transition-all"
         >
           <span>Go to Your Workspace</span>
           <ArrowRight className="w-4 h-4" />

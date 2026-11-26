@@ -104,7 +104,7 @@ function BrowseTuitionsContent() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14 space-y-8">
       {/* Header */}
       <div className="space-y-2">
-        <span className="text-xs font-bold tracking-widest text-teal-600 dark:text-teal-400 uppercase">
+        <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
           EXPLORE OPPORTUNITIES
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
@@ -126,12 +126,12 @@ function BrowseTuitionsContent() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search by tuition title, subject or location..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
           <button
             type="submit"
-            className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-teal-600 hover:bg-teal-700 text-white transition-colors"
+            className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
           >
             Search
           </button>
@@ -150,7 +150,7 @@ function BrowseTuitionsContent() {
                 setSubject(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               {subjectsList.map((sub) => (
                 <option key={sub} value={sub}>
@@ -171,7 +171,7 @@ function BrowseTuitionsContent() {
                 setClassLevel(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               {classLevelsList.map((lvl) => (
                 <option key={lvl} value={lvl}>
@@ -192,7 +192,7 @@ function BrowseTuitionsContent() {
                 setMode(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               {modesList.map((m) => (
                 <option key={m} value={m}>
@@ -248,7 +248,7 @@ function BrowseTuitionsContent() {
           </p>
           <button
             onClick={handleResetFilters}
-            className="px-4 py-2 rounded-xl text-xs font-semibold bg-teal-600 text-white"
+            className="px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white"
           >
             Clear All Filters
           </button>
@@ -275,7 +275,7 @@ function BrowseTuitionsContent() {
                 onClick={() => setPage(pageNum)}
                 className={`w-9 h-9 rounded-xl text-xs font-semibold transition-colors ${
                   isCurrent
-                    ? 'bg-teal-600 text-white shadow-sm'
+                    ? 'bg-indigo-600 text-white shadow-sm'
                     : 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >

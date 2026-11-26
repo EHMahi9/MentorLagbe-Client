@@ -139,12 +139,12 @@ export default function MyApplicationsPage() {
                       <div className="space-y-1">
                         <Link
                           href={`/tuitions/${app.tuitionId}`}
-                          className="font-bold text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 flex items-center gap-1.5"
+                          className="font-bold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-1.5"
                         >
                           <span className="truncate max-w-xs">{app.tuitionTitle}</span>
                           <ExternalLink className="w-3.5 h-3.5 text-gray-400 shrink-0" />
                         </Link>
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300">
+                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300">
                           {app.subject}
                         </span>
                       </div>
@@ -155,7 +155,7 @@ export default function MyApplicationsPage() {
                       <p className="text-[11px] text-gray-400">Preferred: {app.preferredSchedule}</p>
                     </td>
 
-                    <td className="px-6 py-4 font-extrabold text-teal-700 dark:text-teal-400 text-sm">
+                    <td className="px-6 py-4 font-extrabold text-indigo-700 dark:text-indigo-400 text-sm">
                       ৳{app.monthlyFee?.toLocaleString() || 0}
                     </td>
 
@@ -201,7 +201,7 @@ export default function MyApplicationsPage() {
           </div>
           <Link
             href="/tuitions"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-teal-600 text-white shadow-md shadow-teal-600/30"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white shadow-md shadow-indigo-600/30"
           >
             <span>Browse Tuitions</span>
           </Link>
